@@ -28,7 +28,7 @@ a {
   .btn + .btn {
     margin-left: 1rem; }
 
-.btn:hover {
+.btn:hover, .btn.active {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.2);
@@ -245,4 +245,41 @@ a {
     font-size: 0.9rem; } }
 .img {
     width : 100%;
+}
+
+#gallery, .gallery-slide, #gallery-thumbnails, .gallery-thumbnails-slide {
+    overflow: hidden;
+}
+#gallery {
+    padding: 2rem 0;
+    margin: 0 auto;
+}
+.gallery-slide-image {
+    width: 100%;
+    height: 60vh;
+    background-color: #1a1a1a;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.gallery-thumbnails-slide-image {
+    width: 100%;
+    height: 15vh;
+    background-color: #1a1a1a;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#gallery, #gallery-thumbnails { margin-bottom: 2rem; }
+
+@media (max-width: 1440px) {
+    #gallery { max-width: 800px; }
 }
